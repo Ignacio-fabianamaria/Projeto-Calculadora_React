@@ -1,4 +1,5 @@
 import './App.css';
+import Calcultor from './components/Calculator';
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
         <h1><strong>Calculator</strong></h1>
       </header>
       <section className="calculator-field">
-          <h2>CALCULATOR</h2>
+          <Calcultor />
         </section>
       <footer className="App-footer">
         Calculator Project - Developed by Fabiana Ignácio - 2022
