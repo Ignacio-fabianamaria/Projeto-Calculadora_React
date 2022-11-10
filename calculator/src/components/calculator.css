@@ -1,10 +1,68 @@
-.digits {
+button {
     width: 2.5em;
     height: 2.5em;
     font-size: 1em;
+    background-color:#F5F5F5;
     border: none;
     border-radius: 2em;
+    box-shadow:1px 2px 3px rgb(211, 209, 209);
     margin: 0.3em;
+}
+
+button:hover {
+    position: relative;
+			top: 1px;
+			left: 1px;
+			border-color: #000 #999 #999 #000; 
+
+			background: #FFFFFF	;
+}
+
+.grey {
+    background-color: #808080;
+    box-shadow:1px 2px 3px #808080;
+    color: white;
+}
+
+.grey:hover {
+    position: relative;
+			top: 1px;
+			left: 1px;
+			border-color: #000 #999 #999 #000; 
+
+			background: #A9A9A9;
+}
+
+.orange {
+    background-color: #FF8000;
+    box-shadow:1px 2px 3px #FF8000;
+    color: white;
+}
+
+.orange:hover {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    border-color: #000 #999 #999 #000; 
+
+    background: #FFA500; 
+}
+
+.result {
+margin-left: 240px;
+font-size: 1.5em;
+}
+
+.result-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #202020 2px;
+    background-color: #fbf7f7;
+    border-radius: 10px;
+    width: 280px;
+    height: 70px;
+    box-shadow: 2px 2px 4px white;
 }
 
 button:hover {
@@ -12,19 +70,29 @@ button:hover {
 }
 
 .calculator {
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
     border-radius: 1.5em;
-    width: 400px;
-    height: 600px;
+    box-shadow: 3px 10px 20px rgb(51, 50, 50);
+    width: 330px;
+    height: 580px;
+    gap: 10px;
 }
 
 .container-digits {
-    background-color: black;
+    background-color: #202020;
     border-radius: 1.5em;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 200px;
+    width: 300px;
     height: 400px;
     padding: 2px;
+    margin-top: 20px;
+   
+   
 }

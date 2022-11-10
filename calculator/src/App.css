@@ -2,26 +2,23 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
-  height: 8vh;
+  height: 7.3vh;
   display: flex;
-  flex-direction: column;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   font-size: calc(8px + 2vmin);
+  font-family: Noto Sans Mono;
+  font-weight: 900;
   color: white;
+  padding: 3px;
+}
+
+h5 {
+  margin-left: 50px;
 }
 
 .calculator-field {
