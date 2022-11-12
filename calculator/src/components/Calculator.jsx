@@ -5,16 +5,21 @@ export default function Calcultor() {
     const [result, setResult] = useState(0);
 
     const handleChangeEnterDigit =({target: {value}}) => {
-setResult(value);
+setResult(result + value);
 console.log(value);
     }
+
+const handleChangeClear = () => {
+    setResult('')
+}
+
     return (
         <section className="calculator">
             <div className="result-screen">
                 <h1 className="result">{ result }</h1>
             </div>
             <div className="container-digits">
-            <button type="button" className="grey"  onClick={handleChangeEnterDigit}>AC</button>
+            <button type="button" className="grey"  onClick={handleChangeClear}>AC</button>
             <button type="button" className="digits" value={7} onClick={handleChangeEnterDigit}>7</button>
             <button type="button" className="digits" value={4} onClick={handleChangeEnterDigit}>4</button>
             <button type="button" className="digits" value={1} onClick={handleChangeEnterDigit}>1</button>
