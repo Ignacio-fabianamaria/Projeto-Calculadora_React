@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './calculator.css'
 
 export default function Calcultor() {
-    const [result, setResult] = useState(0);
+    const [result, setResult] = useState('');
 
     const handleChangeEnterDigit =({target: {value}}) => {
 setResult(result + value);
@@ -11,6 +11,10 @@ console.log(value);
 
 const handleChangeClear = () => {
     setResult('')
+}
+
+const handleChangeBack = () =>{
+setResult(result.substring(0, (result.length -1)))
 }
 
     return (
@@ -33,7 +37,7 @@ const handleChangeClear = () => {
             <button type="button" className="digits" value={9} onClick={handleChangeEnterDigit}>9</button>
             <button type="button" className="digits" value={6} onClick={handleChangeEnterDigit}>6</button>
             <button type="button" className="digits" value={3} onClick={handleChangeEnterDigit}>3</button>
-            <button type="button" className="digits"  onClick={handleChangeEnterDigit} >&lArr;</button>
+            <button type="button" className="digits"  onClick={handleChangeBack} >&lArr;</button>
             <button type="button" className="orange" value={'/'} onClick={handleChangeEnterDigit}>/</button>
             <button type="button" className="orange" value={'*'} onClick={handleChangeEnterDigit}>*</button>
             <button type="button" className="orange" value={'-'} onClick={handleChangeEnterDigit}>-</button>
