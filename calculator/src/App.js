@@ -12,7 +12,7 @@ function App() {
   const HOURS = DATE.getHours();
   const MIN = DATE.getMinutes();
   const SEC = DATE.getSeconds();
-  const currentHours = `${HOURS}/${MIN}/${SEC}`
+  const currentHours = `${HOURS}:${MIN}:${SEC}`
 
   console.log(currentDate);
   return (
