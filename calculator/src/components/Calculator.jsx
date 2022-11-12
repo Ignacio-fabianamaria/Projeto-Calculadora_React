@@ -20,6 +20,9 @@ export default function Calcultor() {
       setResult(result/100);
   }
 
+  const handleChangeoperator = () => {
+    result > 0 ? setResult(-result) : setResult(Math.abs(result))
+}
 
     return (
         <section className="calculator">
@@ -32,7 +35,7 @@ export default function Calcultor() {
                 <button type="button" className="digits" value={4} onClick={handleChangeEnterDigit}>4</button>
                 <button type="button" className="digits" value={1} onClick={handleChangeEnterDigit}>1</button>
                 <button type="button" className="digits" value={0} onClick={handleChangeEnterDigit}>0</button>
-                <button type="button" className="grey" onClick={handleChangeEnterDigit}>( )</button>
+                <button type="button" className="grey" onClick={handleChangeoperator}>+/-</button>
                 <button type="button" className="digits" value={8} onClick={handleChangeEnterDigit}>8</button>
                 <button type="button" className="digits" value={5} onClick={handleChangeEnterDigit} >5</button>
                 <button type="button" className="digits" value={2} onClick={handleChangeEnterDigit}>2</button>
