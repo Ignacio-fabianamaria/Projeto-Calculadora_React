@@ -1,18 +1,22 @@
 import './App.css';
 import { FcCalculator } from 'react-icons/fc';
 import Calcultor from './components/Calculator';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [currentHours, updateTime] = useState(new Date());
   const DATE = new Date();
   const DAY = String(DATE.getDate());
   const MONTH = String(DATE.getMonth() + 1);
   const YEAR = DATE.getFullYear();
   const currentDate = `${DAY}/${MONTH}/${YEAR}`
 
-  const HOURS = DATE.getHours();
-  const MIN = DATE.getMinutes();
-  const SEC = DATE.getSeconds();
-  const currentHours = `${HOURS}:${MIN}:${SEC}`
+  useEffect(()=> {
+    const timer = setInterval(() => {
+      updateTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  },[])
 
   console.log(currentDate);
   return (
@@ -21,7 +25,7 @@ function App() {
         <FcCalculator style={{ fontSize: '50px', color: ' #FFD700' }} />
         <h1><strong>Calculator</strong></h1>
         <h5>{currentDate}</h5>
-        <h5>{currentHours}</h5>
+        <h5>{currentHours.toLocaleTimeString()}</h5>
       </header>
       <section className="calculator-field">
         <Calcultor />
