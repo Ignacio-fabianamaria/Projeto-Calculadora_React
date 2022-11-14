@@ -2,40 +2,52 @@ import React, { useState } from "react";
 import './calculator.css'
 
 export default function Calcultor() {
-  const [result, setResult] = useState(0);
+  const [num, setNum] = useState([0]);
+  const [firstNum, setFirstNum] = useState([0]);
+  const [operator, setOperator] = useState();
 
   const handleChangeEnterDigit = ({ target: { value } }) => {
-    result === 0 ? setResult(value) : setResult(result + value);
+    num === 0 ? setNum(value) : setNum(num + value);
   }
 
   const handleChangeClear = () => {
-    setResult(0)
+    setNum(0)
   }
 
   const handleChangeBack = () => {
-    result.length > 0 ? setResult(result.length - 1) : setResult(0)
+    num.length > 0 ? setNum(num.length - 1) : setNum(0)
   }
 
   const handleChangepercentage = () => {
-    setResult(result / 100);
+    setNum(num / 100);
   }
 
   const handleChangePositiveNegative = () => {
-    result > 0 ? setResult(-result) : setResult(Math.abs(result))
+    num > 0 ? setNum(-num) : setNum(Math.abs(num))
   }
 
-  const handleChangeLogicalOperators = () => {
-
+  const handleChangeLogicalOperators = ({ target: { value } }) => {
+    setOperator(value);
+    setFirstNum(num);
+    setNum(0);
   }
 
   const generateResult = () => {
-
+if(operator === '/') {
+  setNum(Number(firstNum)/Number(num))
+} else if (operator === '*') {
+  setNum(Number(firstNum)*Number(num))
+} else if (operator === '+') {
+  setNum(Number(firstNum)+ Number(num))
+  } else if (operator === '-') {
+    setNum(Number(firstNum)-Number(num))
   }
+}
 
   return (
     <section className="calculator">
       <div className="result-screen">
-        <h1 className="result">{result}</h1>
+        <h1 className="result">{num}</h1>
       </div>
       <div className="container-digits">
         <button type="button" className="grey" onClick={handleChangeClear}>AC</button>
