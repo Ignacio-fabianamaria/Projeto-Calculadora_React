@@ -3,6 +3,7 @@ import { FcCalculator } from 'react-icons/fc';
 import Calcultor from './components/Calculator';
 import { useEffect, useState } from 'react';
 
+
 function App() {
   const [currentHours, updateTime] = useState(new Date());
   const DATE = new Date();
@@ -22,10 +23,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className='title-header'>
         <FcCalculator style={{ fontSize: '50px', color: ' #FFD700' }} />
         <h1><strong>Calculator</strong></h1>
+        </div>
+        <div className='date-timer'>
         <h5>{currentDate}</h5>
         <h5>{currentHours.toLocaleTimeString()}</h5>
+        </div>
       </header>
       <section className="calculator-field">
         <Calcultor />

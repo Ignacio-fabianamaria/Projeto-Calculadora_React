@@ -49,13 +49,13 @@ button:hover {
 }
 
 .result {
-margin-left: 240px;
 font-size: 1.5em;
+font-family:'Noto Sans Mono', monospace;
 }
 
 .result-screen {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     border: #202020 2px;
     background-color: #fbf7f7;
