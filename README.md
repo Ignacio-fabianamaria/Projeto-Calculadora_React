@@ -3,6 +3,7 @@
 
 ## :memo: Descrição
 <p>Projeto calculadora utilizando React.</p>
+
 ![Calculator](calculatorAPP.png)
 
 ## :books: Funcionalidades
