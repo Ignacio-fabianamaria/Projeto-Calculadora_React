@@ -6,6 +6,8 @@
 
 ![Calculator](calculatorAPP.png)
 
+https://projeto-calculadora-react-gamma.vercel.app/
+
 ## :books: Funcionalidades
 * <b>Funcionalidade </b>: A aplicação simula as operações básicas de uma calculadora simples e ainda incluir no header a data atual e um relógio atualizando em tempo real. 
 :date: 
